@@ -18,10 +18,11 @@ Type.init(
     },
   },
   {
-    sequelize: sequelize(),
+    sequelize,
     // * Si on ne précise pas le nom de la table, sequelize va aller chercher le nom du modèle, en minuscule et au pluriel
     tableName: "type",
     modelName: "Type",
+    timestamps: false,
   }
 );
 

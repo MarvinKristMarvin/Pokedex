@@ -1,26 +1,25 @@
-/*
-import { Model, DataTypes } from 'sequelize';
-import { sequelize } from '../database.js';
+import { Model, DataTypes } from "sequelize";
+import { sequelize } from "../database.js";
 
-class CardHasTag extends Model {}
+class Team_Contains_Pokemon extends Model {}
 
-CardHasTag.init(
-    {
-        card_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        tag_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
+Team_Contains_Pokemon.init(
+  {
+    team_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
-    {
-        sequelize: sequelize(),
-        tableName: 'card_has_tag',
-        modelName: 'CardHasTag',
-    }
+    pokemon_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+  },
+  {
+    sequelize,
+    tableName: "team_pokemon",
+    modelName: "Team_Contains_Pokemon",
+    timestamps: false,
+  }
 );
 
-export { CardHasTag };
-*/
+export { Team_Contains_Pokemon };

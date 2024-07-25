@@ -6,6 +6,10 @@ export const router = Router();
 
 // route test
 router.get("/", testController.testFunction);
+router.get("/pokemons", testController.getAllPokemons);
+router.get("/teams", testController.getAllTeams);
+router.get("/types", testController.getAllTypes);
+router.get("/teamspokemons", testController.getAllTeamContainsPokemon);
 
 // Route pour la liste des taches
 // router.get("/tasks", taskController.getAllTasks);

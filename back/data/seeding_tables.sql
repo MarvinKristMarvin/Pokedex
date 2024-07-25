@@ -2,6 +2,13 @@
 
 BEGIN;
 
+INSERT INTO "team"
+  ("name", "description")
+VALUES
+  ( 'Team eau', 'Une team avec seulement des pokemons de type eau'),
+  ( 'Team feu', 'Une team avec seulement des pokemons de type feu')
+;
+
 INSERT INTO "type"
   ("name", "color")
 VALUES
@@ -182,6 +189,17 @@ VALUES
 
 -- Reset the ID sequence because we manually inserted the ID in the command before, so the sequence needs an update.
 SELECT setval('pokemon_id_seq', (SELECT MAX(id) from "pokemon"));
+
+INSERT INTO "team_pokemon"
+  ("team_id", "pokemon_id")
+VALUES
+  ( '1', '134'),
+  ( '1', '130'),
+  ( '1', '98'),
+  ( '2', '38'),
+  ( '2', '4'),
+  ( '2', '148')
+;
 
 
 INSERT INTO "pokemon_type" 
