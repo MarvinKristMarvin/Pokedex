@@ -4,9 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "echo bonjour",
-    "db": "psql -U pokedex_admin -d pokedex"
+    "dev": "nodemon server.js",
+    "opendb": "psql -U pokedex_admin -d pokedex"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
