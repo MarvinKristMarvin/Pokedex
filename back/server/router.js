@@ -7,7 +7,11 @@ export const router = Router();
 // route test
 router.get("/", testController.testFunction);
 router.get("/pokemons", testController.getAllPokemons);
-router.get("/teams", testController.getAllTeams);
+
+router.get("/teams", testController.getTeams);
+router.post("/teams", testController.postTeam);
+router.delete("/teams/:id", testController.deleteTeam);
+router.patch("/teams/:id", testController.patchTeam);
 router.get("/types", testController.getAllTypes);
 router.get("/teamspokemons", testController.getAllTeamContainsPokemon);
 

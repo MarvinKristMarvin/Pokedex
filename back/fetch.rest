@@ -1,0 +1,19 @@
+### post team
+POST http://localhost:3000/teams
+Content-Type: application/json
+
+{
+    "name": "Team wow"
+}
+
+### delete team
+DELETE http://localhost:3000/teams/3
+Content-Type: application/json
+
+### post team
+PATCH http://localhost:3000/teams/2
+Content-Type: application/json
+
+{
+    "description": "Cramer l'opposition"
+}
