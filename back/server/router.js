@@ -8,37 +8,42 @@ import validationMiddleware from "./middlewares/validationMiddleware.js";
 import teamPatchSchema from "./schemas_joi/team.patch.schema.js";
 import teamPostSchema from "./schemas_joi/team.post.schema.js";
 
+import error404Middleware from "./middlewares/error404Middleware.js";
+import wrapperMiddleware from "./middlewares/wrapperMiddleware.js";
+
 export const router = Router();
 
-router.get("/pokemons", pokemonController.getAll);
-router.get("/pokemons/:id", pokemonController.get);
+router.get("/pokemons", wrapperMiddleware(pokemonController.getAll));
+router.get("/pokemons/:id", wrapperMiddleware(pokemonController.get));
 
-router.get("/types", typeController.getAll);
-router.get("/types/:id", typeController.get);
+router.get("/types", wrapperMiddleware(typeController.getAll));
+router.get("/types/:id", wrapperMiddleware(typeController.get));
 
-router.get("/teams", teamController.getAll);
+router.get("/teams", wrapperMiddleware(teamController.getAll));
 router.post(
   "/teams",
   validationMiddleware(teamPostSchema, "body"),
-  teamController.post
+  wrapperMiddleware(teamController.post)
 );
-router.get("/teams/:id", teamController.get);
-router.delete("/teams/:id", teamController.delete);
+router.get("/teams/:id", wrapperMiddleware(teamController.get));
+router.delete("/teams/:id", wrapperMiddleware(teamController.delete));
 router.patch(
   "/teams/:id",
   validationMiddleware(teamPatchSchema, "body"),
-  teamController.patch
+  wrapperMiddleware(teamController.patch)
 );
 router.put(
   "/teams/:team_id/pokemons/:pokemon_id",
-  teamController.putPokemonInTeam
+  wrapperMiddleware(teamController.putPokemonInTeam)
 );
 router.delete(
   "/teams/:team_id/pokemons/:pokemon_id",
-  teamController.deletePokemonFromTeam
+  wrapperMiddleware(teamController.deletePokemonFromTeam)
 );
 
 /* TO DO
 router.post("/pokemons/:id/votes", voteController.post)
 router.get("/pokemons/leaderboard", voteController.getTopTen)
 */
+
+router.use(error404Middleware);

@@ -19,15 +19,13 @@ Pokemon.belongsToMany(Type, {
 //* Association ON ON via un modèle (on aurait pu mettre la table pokemon_type)
 Pokemon.belongsToMany(Team, {
   foreignKey: "pokemon_id",
-  // otherKey: "team_id",
-  through: Team_Contains_Pokemon,
   as: "teams",
+  through: Team_Contains_Pokemon,
 });
 Team.belongsToMany(Pokemon, {
   foreignKey: "team_id",
-  // otherKey: "pokemon_id",
-  through: Team_Contains_Pokemon,
   as: "pokemons",
+  through: Team_Contains_Pokemon,
 });
 
 export { Pokemon, Type /*, Team, Team_Contains_Pokemon */ };
