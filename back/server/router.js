@@ -1,28 +1,44 @@
 import { Router } from "express";
-// import * as taskController from "./controllers/task.js";
-import { testController } from "./controllers/testController.js";
+
+import { teamController } from "./controllers/teamController.js";
+import { pokemonController } from "./controllers/pokemonController.js";
+import { typeController } from "./controllers/typeController.js";
+
+import validationMiddleware from "./middlewares/validationMiddleware.js";
+import teamPatchSchema from "./schemas_joi/team.patch.schema.js";
+import teamPostSchema from "./schemas_joi/team.post.schema.js";
 
 export const router = Router();
 
-// route test
-router.get("/", testController.testFunction);
-router.get("/pokemons", testController.getAllPokemons);
+router.get("/pokemons", pokemonController.getAll);
+router.get("/pokemons/:id", pokemonController.get);
 
-router.get("/teams", testController.getTeams);
-router.post("/teams", testController.postTeam);
-router.delete("/teams/:id", testController.deleteTeam);
-router.patch("/teams/:id", testController.patchTeam);
-router.get("/types", testController.getAllTypes);
-router.get("/teamspokemons", testController.getAllTeamContainsPokemon);
+router.get("/types", typeController.getAll);
+router.get("/types/:id", typeController.get);
 
-// Route pour la liste des taches
-// router.get("/tasks", taskController.getAllTasks);
+router.get("/teams", teamController.getAll);
+router.post(
+  "/teams",
+  validationMiddleware(teamPostSchema, "body"),
+  teamController.post
+);
+router.get("/teams/:id", teamController.get);
+router.delete("/teams/:id", teamController.delete);
+router.patch(
+  "/teams/:id",
+  validationMiddleware(teamPatchSchema, "body"),
+  teamController.patch
+);
+router.put(
+  "/teams/:team_id/pokemons/:pokemon_id",
+  teamController.putPokemonInTeam
+);
+router.delete(
+  "/teams/:team_id/pokemons/:pokemon_id",
+  teamController.deletePokemonFromTeam
+);
 
-// Route pour ajouter une tache
-// router.post("/tasks", taskController.createTask);
-
-// Route pour modifier une tache
-// router.patch("/tasks/:id", taskController.updateTask);
-
-// Route pour supprimer une tache
-// router.delete("/tasks/:id", taskController.deleteTask);
+/* TO DO
+router.post("/pokemons/:id/votes", voteController.post)
+router.get("/pokemons/leaderboard", voteController.getTopTen)
+*/

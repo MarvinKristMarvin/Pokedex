@@ -3,11 +3,11 @@ POST http://localhost:3000/teams
 Content-Type: application/json
 
 {
-    "name": "Team wow"
+    "description": "Team wow"
 }
 
 ### delete team
-DELETE http://localhost:3000/teams/3
+DELETE http://localhost:3000/teams/7
 Content-Type: application/json
 
 ### post team
@@ -17,3 +17,7 @@ Content-Type: application/json
 {
     "description": "Cramer l'opposition"
 }
+
+### GET TYPES
+GET http://localhost:3000/types
+Content-Type: application/json
