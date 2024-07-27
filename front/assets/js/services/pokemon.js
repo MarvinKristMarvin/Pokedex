@@ -1,6 +1,6 @@
 const pokemonServices = {
-  async getFirstPokemon() {
-    const response = await fetch("http://localhost:3000/pokemons/1");
+  async getAllPokemons() {
+    const response = await fetch("http://localhost:3000/pokemons");
 
     if (!response.ok) {
       const error = await response.text();

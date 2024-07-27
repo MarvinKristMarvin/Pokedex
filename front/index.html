@@ -22,7 +22,11 @@
     />
 
     <!-- Custom CSS-->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/searchMenu.css" />
+    <link rel="stylesheet" href="./assets/css/results.css" />
 
     <!-- Custom JS -->
     <!-- Module does defer -->
@@ -31,10 +35,88 @@
 
   <body>
     <header>
-      <h1>Pokedex</h1>
-      <p>Test data</p>
+      <div class="title-container">
+        <img src="./assets/icons/pokeball.svg" height="40" width="40" />
+        <h1>Pokedex</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="">Connexion</a>
+      </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <section class="search-section">
+        <div class="search-inputs-div">
+          <form action="">
+            <input
+              class="input-name"
+              type="text"
+              placeholder="Search for a pokemon"
+            />
+            <div class="type-selection">
+              <div>
+                <label for="alltypes">All types</label>
+                <input type="checkbox" id="alltypes" />
+              </div>
+              <div>
+                <label for="water">Water</label>
+                <input type="checkbox" id="water" />
+              </div>
+              <div>
+                <label for="fire">Fire</label>
+                <input type="checkbox" id="fire" />
+              </div>
+              <div>
+                <label for="poison">Poison</label>
+                <input type="checkbox" id="poison" />
+              </div>
+            </div>
+            <select name="sorting" id="sorting">
+              <option value="votes">Sort by votes</option>
+              <option value="votes reverse">Sort by reverse votes</option>
+              <option value="alphabet">Sort alphabetically</option>
+            </select>
+            <select name="team-selection" id="team-selection">
+              <option value="no-team">Team : none</option>
+              <option value="add-team">+ Create a new team</option>
+            </select>
+            <div class="options">
+              <div>
+                <label for="show-name">Show name</label>
+                <input type="checkbox" id="show-name" />
+              </div>
+              <div>
+                <label for="show-stats">Show stats</label>
+                <input type="checkbox" id="show-stats" />
+              </div>
+              <div>
+                <label for="show-type">Show type</label>
+                <input type="checkbox" id="show-type" />
+              </div>
+              <div>
+                <label for="show-buttons">Show buttons</label>
+                <input type="checkbox" id="show-buttons" />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="search-infos-div">
+          <p>Results : 27</p>
+        </div>
+      </section>
+      <section class="results-section">
+        <div class="pokemon-div">
+          <div class="image-container">
+            <img src="./assets/img/1.webp" alt="" />
+          </div>
+          <div class="name-div">
+            <span>Brisemoule</span>
+            <span>#150</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&#9400; OPOKEDEX 2024</p>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--reallydark);
+
+  & .title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 10px;
+    padding-block: 10px;
+  }
+
+  & img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(249deg)
+      brightness(100%) contrast(103%);
+    margin-right: 8px;
+  }
+
+  & h1,
+  a {
+    font-size: 50px;
+    color: var(--white);
+    font-family: "Poppins", serif;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  & a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    margin-right: 13px;
+  }
+}

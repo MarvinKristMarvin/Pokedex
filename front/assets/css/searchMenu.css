@@ -1,0 +1,77 @@
+.search-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--white);
+  background-color: var(--medium);
+  font-family: "Poppins", serial;
+  font-weight: 600;
+  font-size: 16px;
+  width: 25%;
+
+  & .search-inputs-div {
+    & form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      margin-inline: 30px;
+      & > * {
+        margin-bottom: 15px;
+      }
+      & > input {
+        padding-block: 20px;
+        border-width: 0px;
+        border-radius: 5px;
+        margin-bottom: 25px;
+        background-color: var(--reallydark);
+
+        &::placeholder {
+          color: var(--placeholder);
+          padding-left: 20px;
+          font-size: 25px;
+        }
+      }
+
+      & select {
+        padding-block: 15px;
+        border-width: 0px;
+        border-radius: 4px;
+        margin-bottom: 25px;
+        font-weight: 800;
+        font-size: 16px;
+        color: var(--white);
+        background-color: var(--reallydark);
+
+        & option {
+          /* margin left ne fonctionne pas ici */
+        }
+      }
+
+      & > div {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      & > div div {
+        background-color: var(--reallydark);
+        border-radius: 4px;
+        margin-bottom: 8px;
+        margin-right: 10px;
+        padding-block: 5px;
+        padding-inline: 10px;
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      & > .options div {
+        width: 160px;
+      }
+    }
+  }
+
+  & .search-infos-div {
+    margin-bottom: 30px;
+    margin-inline: 30px;
+  }
+}
