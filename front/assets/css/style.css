@@ -8,6 +8,7 @@
   --placeholder: #8a8a8a;
   --maincolor: #7289da;
   --white: #ffffff;
+  --pokemon-div-separation: #8888886c;
 }
 
 * {
@@ -31,4 +32,9 @@ main {
   display: flex;
   flex-direction: row;
   height: 937px;
+}
+
+.hidden {
+  display: none;
+  /* visibility: hidden; */
 }

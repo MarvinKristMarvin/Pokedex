@@ -2,25 +2,83 @@
   font-family: "Poppins", serial;
   background-color: var(--dark);
   color: var(--white);
-  width: 75%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  overflow-y: scroll;
 
   & .pokemon-div {
     margin: 30px;
+    margin-bottom: 0px;
+    margin-right: 0px;
     background-color: var(--medium);
-    width: 20%;
+    width: 250px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     padding: 30px;
+    padding-block: 25px;
+    font-weight: 600;
+    &:hover {
+      cursor: grab;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 15px;
+      padding-bottom: 10px;
+      border-bottom: solid 1px var(--pokemon-div-separation);
+
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+
+      & button {
+        border-width: 0px;
+        border-radius: 4px;
+        margin-bottom: 7px;
+        padding-block: 3px;
+        padding-inline: 10px;
+        background-color: var(--placeholder);
+        font-weight: 900;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:hover {
+          cursor: grab;
+        }
+      }
+
+      & .team-button {
+        background-color: rgb(255, 225, 57);
+      }
+      & .up-button {
+        background-color: rgb(201, 255, 120);
+      }
+      & .down-button {
+        background-color: rgb(255, 98, 98);
+      }
+    }
+
+    & > div:last-child {
+      border-bottom: none;
+      padding-bottom: 0px;
+
+      & > :last-child {
+      }
+    }
 
     & .image-container {
       height: 100%;
       width: 100%;
       object-fit: cover;
-      border-bottom: solid 1px var(--placeholder);
 
       & img {
         max-width: 100%;
@@ -28,14 +86,22 @@
       }
     }
 
-    & .name-div {
-      margin-top: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      & span {
-      }
+    /*& .stats-div {
+      display: none;
+      visibility: hidden;
     }
+    & .type-div {
+      display: none;
+      visibility: hidden;
+    }
+    & .buttons-div {
+      display: none;
+      visibility: hidden;
+    }
+    & .name-div {
+      le lastchild ne marche pas car les elements html sont tjs presents
+      border-bottom: none;
+      padding-bottom: 0px;
+    }*/
   }
 }

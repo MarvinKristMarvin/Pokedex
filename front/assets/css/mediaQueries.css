@@ -1,0 +1,23 @@
+@media (max-width: 320px) {
+  main {
+    flex-direction: column;
+  }
+  header {
+    & img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+  .search-section {
+    width: 100%;
+  }
+
+  .results-section {
+    justify-content: space-evenly;
+  }
+}

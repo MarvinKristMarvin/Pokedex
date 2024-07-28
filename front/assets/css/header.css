@@ -35,4 +35,8 @@ header {
     font-weight: 400;
     margin-right: 13px;
   }
+
+  & i {
+    color: var(--white);
+  }
 }

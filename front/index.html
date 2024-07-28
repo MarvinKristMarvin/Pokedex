@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/searchMenu.css" />
     <link rel="stylesheet" href="./assets/css/results.css" />
+    <link rel="stylesheet" href="./assets/css/mediaQueries.css" />
 
     <!-- Custom JS -->
     <!-- Module does defer -->
@@ -40,18 +41,14 @@
         <h1>Pokedex</h1>
       </div>
       <nav class="main-nav">
-        <a href="">Connexion</a>
+        <a href=""><i class="fa-solid fa-circle-user fa-2xl"></i></a>
       </nav>
     </header>
     <main>
       <section class="search-section">
         <div class="search-inputs-div">
           <form action="">
-            <input
-              class="input-name"
-              type="text"
-              placeholder="Search for a pokemon"
-            />
+            <input class="input-name" type="text" placeholder="Search name" />
             <div class="type-selection">
               <div>
                 <label for="alltypes">All types</label>
@@ -109,8 +106,559 @@
             <img src="./assets/img/1.webp" alt="" />
           </div>
           <div class="name-div">
-            <span>Brisemoule</span>
-            <span>#150</span>
+            <div><span>Brisemoule</span> <span>#150</span></div>
+          </div>
+          <div class="type-div">
+            <div>
+              <span>Type</span>
+              <div>
+                <span>Water</span>
+                <span>Earth</span>
+              </div>
+            </div>
+          </div>
+          <div class="stats-div">
+            <div>
+              <span class="stat-name">HP</span>
+              <span class="stat-value">90</span>
+            </div>
+            <div>
+              <span class="stat-name">Speed</span>
+              <span class="stat-value">45</span>
+            </div>
+            <div>
+              <span class="stat-name">Atk</span>
+              <span class="stat-value">50</span>
+            </div>
+            <div>
+              <span class="stat-name">Def</span>
+              <span class="stat-value">70</span>
+            </div>
+            <div>
+              <span class="stat-name">Atkspd</span>
+              <span class="stat-value">40</span>
+            </div>
+            <div>
+              <span class="stat-name">Defspd</span>
+              <span class="stat-value">50</span>
+            </div>
+          </div>
+          <div class="buttons-div">
+            <button class="team-button">
+              <i class="fa-solid fa-plus"></i> Add to a team
+            </button>
+            <button class="up-button">
+              <i class="fa-solid fa-arrow-up"></i>
+              <span class="vote-number">38</span>
+            </button>
+            <button class="down-button">
+              <i class="fa-solid fa-arrow-down"></i>
+              <span class="vote-number">27</span>
+            </button>
+          </div>
+        </div>
+        <div class="pokemon-div">
+          <div class="image-container">
+            <img src="./assets/img/1.webp" alt="" />
+          </div>
+          <div class="name-div">
+            <div><span>Brisemoule</span> <span>#150</span></div>
+          </div>
+          <div class="type-div">
+            <div>
+              <span>Type</span>
+              <div>
+                <span>Water</span>
+                <span>Earth</span>
+              </div>
+            </div>
+          </div>
+          <div class="stats-div">
+            <div>
+              <span class="stat-name">HP</span>
+              <span class="stat-value">90</span>
+            </div>
+            <div>
+              <span class="stat-name">Speed</span>
+              <span class="stat-value">45</span>
+            </div>
+            <div>
+              <span class="stat-name">Atk</span>
+              <span class="stat-value">50</span>
+            </div>
+            <div>
+              <span class="stat-name">Def</span>
+              <span class="stat-value">70</span>
+            </div>
+            <div>
+              <span class="stat-name">Atkspd</span>
+              <span class="stat-value">40</span>
+            </div>
+            <div>
+              <span class="stat-name">Defspd</span>
+              <span class="stat-value">50</span>
+            </div>
+          </div>
+          <div class="buttons-div">
+            <button class="team-button">
+              <i class="fa-solid fa-plus"></i> Add to a team
+            </button>
+            <button class="up-button">
+              <i class="fa-solid fa-arrow-up"></i>
+              <span class="vote-number">38</span>
+            </button>
+            <button class="down-button">
+              <i class="fa-solid fa-arrow-down"></i>
+              <span class="vote-number">27</span>
+            </button>
+          </div>
+        </div>
+        <div class="pokemon-div">
+          <div class="image-container">
+            <img src="./assets/img/1.webp" alt="" />
+          </div>
+          <div class="name-div">
+            <div><span>Brisemoule</span> <span>#150</span></div>
+          </div>
+          <div class="type-div">
+            <div>
+              <span>Type</span>
+              <div>
+                <span>Water</span>
+                <span>Earth</span>
+              </div>
+            </div>
+          </div>
+          <div class="stats-div">
+            <div>
+              <span class="stat-name">HP</span>
+              <span class="stat-value">90</span>
+            </div>
+            <div>
+              <span class="stat-name">Speed</span>
+              <span class="stat-value">45</span>
+            </div>
+            <div>
+              <span class="stat-name">Atk</span>
+              <span class="stat-value">50</span>
+            </div>
+            <div>
+              <span class="stat-name">Def</span>
+              <span class="stat-value">70</span>
+            </div>
+            <div>
+              <span class="stat-name">Atkspd</span>
+              <span class="stat-value">40</span>
+            </div>
+            <div>
+              <span class="stat-name">Defspd</span>
+              <span class="stat-value">50</span>
+            </div>
+          </div>
+          <div class="buttons-div">
+            <button class="team-button">
+              <i class="fa-solid fa-plus"></i> Add to a team
+            </button>
+            <button class="up-button">
+              <i class="fa-solid fa-arrow-up"></i>
+              <span class="vote-number">38</span>
+            </button>
+            <button class="down-button">
+              <i class="fa-solid fa-arrow-down"></i>
+              <span class="vote-number">27</span>
+            </button>
+          </div>
+        </div>
+        <div class="pokemon-div">
+          <div class="image-container">
+            <img src="./assets/img/1.webp" alt="" />
+          </div>
+          <div class="name-div">
+            <div><span>Brisemoule</span> <span>#150</span></div>
+          </div>
+          <div class="type-div">
+            <div>
+              <span>Type</span>
+              <div>
+                <span>Water</span>
+                <span>Earth</span>
+              </div>
+            </div>
+          </div>
+          <div class="stats-div">
+            <div>
+              <span class="stat-name">HP</span>
+              <span class="stat-value">90</span>
+            </div>
+            <div>
+              <span class="stat-name">Speed</span>
+              <span class="stat-value">45</span>
+            </div>
+            <div>
+              <span class="stat-name">Atk</span>
+              <span class="stat-value">50</span>
+            </div>
+            <div>
+              <span class="stat-name">Def</span>
+              <span class="stat-value">70</span>
+            </div>
+            <div>
+              <span class="stat-name">Atkspd</span>
+              <span class="stat-value">40</span>
+            </div>
+            <div>
+              <span class="stat-name">Defspd</span>
+              <span class="stat-value">50</span>
+            </div>
+          </div>
+          <div class="buttons-div">
+            <button class="team-button">
+              <i class="fa-solid fa-plus"></i> Add to a team
+            </button>
+            <button class="up-button">
+              <i class="fa-solid fa-arrow-up"></i>
+              <span class="vote-number">38</span>
+            </button>
+            <button class="down-button">
+              <i class="fa-solid fa-arrow-down"></i>
+              <span class="vote-number">27</span>
+            </button>
+          </div>
+        </div>
+        <div class="pokemon-div">
+          <div class="image-container">
+            <img src="./assets/img/1.webp" alt="" />
+          </div>
+          <div class="name-div">
+            <div><span>Brisemoule</span> <span>#150</span></div>
+          </div>
+          <div class="type-div">
+            <div>
+              <span>Type</span>
+              <div>
+                <span>Water</span>
+                <span>Earth</span>
+              </div>
+            </div>
+          </div>
+          <div class="stats-div">
+            <div>
+              <span class="stat-name">HP</span>
+              <span class="stat-value">90</span>
+            </div>
+            <div>
+              <span class="stat-name">Speed</span>
+              <span class="stat-value">45</span>
+            </div>
+            <div>
+              <span class="stat-name">Atk</span>
+              <span class="stat-value">50</span>
+            </div>
+            <div>
+              <span class="stat-name">Def</span>
+              <span class="stat-value">70</span>
+            </div>
+            <div>
+              <span class="stat-name">Atkspd</span>
+              <span class="stat-value">40</span>
+            </div>
+            <div>
+              <span class="stat-name">Defspd</span>
+              <span class="stat-value">50</span>
+            </div>
+          </div>
+          <div class="buttons-div">
+            <button class="team-button">
+              <i class="fa-solid fa-plus"></i> Add to a team
+            </button>
+            <button class="up-button">
+              <i class="fa-solid fa-arrow-up"></i>
+              <span class="vote-number">38</span>
+            </button>
+            <button class="down-button">
+              <i class="fa-solid fa-arrow-down"></i>
+              <span class="vote-number">27</span>
+            </button>
+          </div>
+        </div>
+        <div class="pokemon-div">
+          <div class="image-container">
+            <img src="./assets/img/1.webp" alt="" />
+          </div>
+          <div class="name-div">
+            <div><span>Brisemoule</span> <span>#150</span></div>
+          </div>
+          <div class="type-div">
+            <div>
+              <span>Type</span>
+              <div>
+                <span>Water</span>
+                <span>Earth</span>
+              </div>
+            </div>
+          </div>
+          <div class="stats-div">
+            <div>
+              <span class="stat-name">HP</span>
+              <span class="stat-value">90</span>
+            </div>
+            <div>
+              <span class="stat-name">Speed</span>
+              <span class="stat-value">45</span>
+            </div>
+            <div>
+              <span class="stat-name">Atk</span>
+              <span class="stat-value">50</span>
+            </div>
+            <div>
+              <span class="stat-name">Def</span>
+              <span class="stat-value">70</span>
+            </div>
+            <div>
+              <span class="stat-name">Atkspd</span>
+              <span class="stat-value">40</span>
+            </div>
+            <div>
+              <span class="stat-name">Defspd</span>
+              <span class="stat-value">50</span>
+            </div>
+          </div>
+          <div class="buttons-div">
+            <button class="team-button">
+              <i class="fa-solid fa-plus"></i> Add to a team
+            </button>
+            <button class="up-button">
+              <i class="fa-solid fa-arrow-up"></i>
+              <span class="vote-number">38</span>
+            </button>
+            <button class="down-button">
+              <i class="fa-solid fa-arrow-down"></i>
+              <span class="vote-number">27</span>
+            </button>
+          </div>
+        </div>
+        <div class="pokemon-div">
+          <div class="image-container">
+            <img src="./assets/img/1.webp" alt="" />
+          </div>
+          <div class="name-div">
+            <div><span>Brisemoule</span> <span>#150</span></div>
+          </div>
+          <div class="type-div">
+            <div>
+              <span>Type</span>
+              <div>
+                <span>Water</span>
+                <span>Earth</span>
+              </div>
+            </div>
+          </div>
+          <div class="stats-div">
+            <div>
+              <span class="stat-name">HP</span>
+              <span class="stat-value">90</span>
+            </div>
+            <div>
+              <span class="stat-name">Speed</span>
+              <span class="stat-value">45</span>
+            </div>
+            <div>
+              <span class="stat-name">Atk</span>
+              <span class="stat-value">50</span>
+            </div>
+            <div>
+              <span class="stat-name">Def</span>
+              <span class="stat-value">70</span>
+            </div>
+            <div>
+              <span class="stat-name">Atkspd</span>
+              <span class="stat-value">40</span>
+            </div>
+            <div>
+              <span class="stat-name">Defspd</span>
+              <span class="stat-value">50</span>
+            </div>
+          </div>
+          <div class="buttons-div">
+            <button class="team-button">
+              <i class="fa-solid fa-plus"></i> Add to a team
+            </button>
+            <button class="up-button">
+              <i class="fa-solid fa-arrow-up"></i>
+              <span class="vote-number">38</span>
+            </button>
+            <button class="down-button">
+              <i class="fa-solid fa-arrow-down"></i>
+              <span class="vote-number">27</span>
+            </button>
+          </div>
+        </div>
+        <div class="pokemon-div">
+          <div class="image-container">
+            <img src="./assets/img/1.webp" alt="" />
+          </div>
+          <div class="name-div">
+            <div><span>Brisemoule</span> <span>#150</span></div>
+          </div>
+          <div class="type-div">
+            <div>
+              <span>Type</span>
+              <div>
+                <span>Water</span>
+                <span>Earth</span>
+              </div>
+            </div>
+          </div>
+          <div class="stats-div">
+            <div>
+              <span class="stat-name">HP</span>
+              <span class="stat-value">90</span>
+            </div>
+            <div>
+              <span class="stat-name">Speed</span>
+              <span class="stat-value">45</span>
+            </div>
+            <div>
+              <span class="stat-name">Atk</span>
+              <span class="stat-value">50</span>
+            </div>
+            <div>
+              <span class="stat-name">Def</span>
+              <span class="stat-value">70</span>
+            </div>
+            <div>
+              <span class="stat-name">Atkspd</span>
+              <span class="stat-value">40</span>
+            </div>
+            <div>
+              <span class="stat-name">Defspd</span>
+              <span class="stat-value">50</span>
+            </div>
+          </div>
+          <div class="buttons-div">
+            <button class="team-button">
+              <i class="fa-solid fa-plus"></i> Add to a team
+            </button>
+            <button class="up-button">
+              <i class="fa-solid fa-arrow-up"></i>
+              <span class="vote-number">38</span>
+            </button>
+            <button class="down-button">
+              <i class="fa-solid fa-arrow-down"></i>
+              <span class="vote-number">27</span>
+            </button>
+          </div>
+        </div>
+        <div class="pokemon-div">
+          <div class="image-container">
+            <img src="./assets/img/1.webp" alt="" />
+          </div>
+          <div class="name-div">
+            <div><span>Brisemoule</span> <span>#150</span></div>
+          </div>
+          <div class="type-div">
+            <div>
+              <span>Type</span>
+              <div>
+                <span>Water</span>
+                <span>Earth</span>
+              </div>
+            </div>
+          </div>
+          <div class="stats-div">
+            <div>
+              <span class="stat-name">HP</span>
+              <span class="stat-value">90</span>
+            </div>
+            <div>
+              <span class="stat-name">Speed</span>
+              <span class="stat-value">45</span>
+            </div>
+            <div>
+              <span class="stat-name">Atk</span>
+              <span class="stat-value">50</span>
+            </div>
+            <div>
+              <span class="stat-name">Def</span>
+              <span class="stat-value">70</span>
+            </div>
+            <div>
+              <span class="stat-name">Atkspd</span>
+              <span class="stat-value">40</span>
+            </div>
+            <div>
+              <span class="stat-name">Defspd</span>
+              <span class="stat-value">50</span>
+            </div>
+          </div>
+          <div class="buttons-div">
+            <button class="team-button">
+              <i class="fa-solid fa-plus"></i> Add to a team
+            </button>
+            <button class="up-button">
+              <i class="fa-solid fa-arrow-up"></i>
+              <span class="vote-number">38</span>
+            </button>
+            <button class="down-button">
+              <i class="fa-solid fa-arrow-down"></i>
+              <span class="vote-number">27</span>
+            </button>
+          </div>
+        </div>
+        <div class="pokemon-div">
+          <div class="image-container">
+            <img src="./assets/img/1.webp" alt="" />
+          </div>
+          <div class="name-div">
+            <div><span>Brisemoule</span> <span>#150</span></div>
+          </div>
+          <div class="type-div">
+            <div>
+              <span>Type</span>
+              <div>
+                <span>Water</span>
+                <span>Earth</span>
+              </div>
+            </div>
+          </div>
+          <div class="stats-div">
+            <div>
+              <span class="stat-name">HP</span>
+              <span class="stat-value">90</span>
+            </div>
+            <div>
+              <span class="stat-name">Speed</span>
+              <span class="stat-value">45</span>
+            </div>
+            <div>
+              <span class="stat-name">Atk</span>
+              <span class="stat-value">50</span>
+            </div>
+            <div>
+              <span class="stat-name">Def</span>
+              <span class="stat-value">70</span>
+            </div>
+            <div>
+              <span class="stat-name">Atkspd</span>
+              <span class="stat-value">40</span>
+            </div>
+            <div>
+              <span class="stat-name">Defspd</span>
+              <span class="stat-value">50</span>
+            </div>
+          </div>
+          <div class="buttons-div">
+            <button class="team-button">
+              <i class="fa-solid fa-plus"></i> Add to a team
+            </button>
+            <button class="up-button">
+              <i class="fa-solid fa-arrow-up"></i>
+              <span class="vote-number">38</span>
+            </button>
+            <button class="down-button">
+              <i class="fa-solid fa-arrow-down"></i>
+              <span class="vote-number">27</span>
+            </button>
           </div>
         </div>
       </section>
