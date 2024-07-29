@@ -41,8 +41,22 @@
         display: flex;
         justify-content: space-between;
 
-        & div {
+        & .type-div {
           width: 125px;
+          & label {
+            padding-block: 5px;
+            padding-left: 10px;
+            &:hover {
+              cursor: grab;
+            }
+          }
+
+          & input {
+            margin-right: 10px;
+            &:hover {
+              cursor: grab;
+            }
+          }
         }
       }
 
@@ -56,9 +70,10 @@
         color: var(--white);
         background-color: var(--reallydark);
         padding-inline: 10px;
-      }
 
-      & option {
+        &:hover {
+          cursor: grab;
+        }
       }
 
       & > div {
@@ -71,8 +86,8 @@
         border-radius: 4px;
         margin-bottom: 8px;
         margin-right: 10px;
-        padding-block: 5px;
-        padding-inline: 10px;
+        padding-block: 0px;
+        padding-inline: 0px;
         width: 120px;
         display: flex;
         justify-content: space-between;
@@ -81,6 +96,23 @@
       }
       & > .options div {
         width: 100%;
+        display: flex;
+        align-items: center;
+
+        & > label {
+          padding-block: 7px;
+          padding-left: 10px;
+          &:hover {
+            cursor: grab;
+          }
+        }
+
+        & > input {
+          margin-right: 10px;
+          &:hover {
+            cursor: grab;
+          }
+        }
       }
     }
   }
