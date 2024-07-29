@@ -5,6 +5,7 @@
   --dark: #282b30;
   --lessdark: #36393e;
   --medium: #424549;
+  --hovermedium: #5a5c5f;
   --placeholder: #8a8a8a;
   --maincolor: #7289da;
   --white: #ffffff;
@@ -20,21 +21,24 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: var(--reallydark);
-  padding-block: 10px;
+  padding-block: 13px;
   color: var(--white);
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
 }
 
 main {
   display: flex;
   flex-direction: row;
   height: 937px;
+  background-color: var(--dark);
 }
 
 .hidden {
-  display: none;
+  display: none !important;
   /* visibility: hidden; */
 }

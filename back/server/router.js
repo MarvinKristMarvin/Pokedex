@@ -13,7 +13,11 @@ import wrapperMiddleware from "./middlewares/wrapperMiddleware.js";
 
 export const router = Router();
 
-router.get("/pokemons", wrapperMiddleware(pokemonController.getAll));
+router.get(
+  "/pokemons",
+  wrapperMiddleware(pokemonController.getAllWithTheirTypes)
+);
+/*router.get("/pokemons", wrapperMiddleware(pokemonController.getAll));*/
 router.get("/pokemons/:id", wrapperMiddleware(pokemonController.get));
 
 router.get("/types", wrapperMiddleware(typeController.getAll));

@@ -1,4 +1,4 @@
-import { Pokemon } from "../models/Pokemon.js";
+import { Pokemon, Type } from "../models/associations.js";
 
 const pokemonController = {
   getAll: async function (req, res) {
@@ -12,6 +12,13 @@ const pokemonController = {
     if (!json) {
       return next();
     }
+    res.status(200).json(json);
+  },
+
+  getAllWithTheirTypes: async function (req, res) {
+    const json = await Pokemon.findAll({
+      include: "types",
+    });
     res.status(200).json(json);
   },
 };
