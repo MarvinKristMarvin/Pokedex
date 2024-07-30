@@ -21,3 +21,7 @@ Content-Type: application/json
 ### GET TYPES
 GET http://localhost:3000/types
 Content-Type: application/json
+
+###
+GET http://localhost:3000/pokemonsoftype/1
+Content-Type: application/json

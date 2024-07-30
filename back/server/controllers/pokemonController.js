@@ -21,6 +21,14 @@ const pokemonController = {
     });
     res.status(200).json(json);
   },
+
+  getPokemonsOfType: async function (req, res) {
+    const { id } = req.params;
+    const json = await Type.findByPk(id, {
+      include: "pokemons",
+    });
+    res.status(200).json(json);
+  },
 };
 
 export { pokemonController };

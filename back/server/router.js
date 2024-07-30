@@ -19,6 +19,10 @@ router.get(
 );
 /*router.get("/pokemons", wrapperMiddleware(pokemonController.getAll));*/
 router.get("/pokemons/:id", wrapperMiddleware(pokemonController.get));
+router.get(
+  "/pokemonsoftype/:id",
+  wrapperMiddleware(pokemonController.getPokemonsOfType)
+);
 
 router.get("/types", wrapperMiddleware(typeController.getAll));
 router.get("/types/:id", wrapperMiddleware(typeController.get));
